@@ -8,9 +8,9 @@ document = Document('references.docx')
 references = defaultdict(list) # Using lists to hold values under the same year as the key.
 
 ''' For every paragraph in the document try to find any four digit number
-	where the first digit should either be 1 or 2, and the third and fourth
-	digits are anything from 0 - 9, and add it to the references dictionary
-	with year as the key.
+	where the first digit should either be 1 or 2 and the rest of the 
+	digits are 0 - 9, and add it to the references dictionary with the 
+	matched string as the key.
 ''' 
 for line in document.paragraphs:
 	line = line.text.encode('ascii', 'ignore').decode('ascii')
